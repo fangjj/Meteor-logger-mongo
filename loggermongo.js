@@ -14,7 +14,7 @@ class LoggerMongo {
     check(logger, Match.OneOf(Logger, Object));
     check(options, {
       collectionName: Match.Optional(String),
-      collection: Match.Optional(Match.OneOf(Mongo.Collection, Object)),
+      collection: Match.Optional(Match.OneOf(Mongo.Collection, Match.Any)),
       format: Match.Optional(Function)
     });
 
